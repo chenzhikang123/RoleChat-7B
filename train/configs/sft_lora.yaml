@@ -1,0 +1,39 @@
+### 模型路径
+model_name_or_path: D:\llm\RoleChat-7B\models\Qwen\Qwen2___5-7B-Instruct
+
+### 训练方式
+stage: sft
+do_train: true
+finetuning_type: lora
+
+### LoRA参数
+lora_target: q_proj,v_proj,k_proj,o_proj
+lora_rank: 16
+lora_alpha: 32
+lora_dropout: 0.05
+
+### 数据配置
+dataset: rolechat_train
+dataset_dir: D:\llm\LLaMA-Factory\data
+template: qwen
+cutoff_len: 2048
+max_samples: 17521
+
+### 训练参数
+output_dir: D:\llm\RoleChat-7B\output\sft
+num_train_epochs: 3
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 2.0e-4
+lr_scheduler_type: cosine
+warmup_ratio: 0.05
+
+### 精度配置
+bf16: true
+gradient_checkpointing: true
+
+### 日志保存
+logging_steps: 50
+save_steps: 500
+save_total_limit: 3
+plot_loss: true
