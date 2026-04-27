@@ -5,5 +5,5 @@ output/
 *.gguf
 data/raw/
 .idea/
-data/data/processed/
+data/processed/
 test.py

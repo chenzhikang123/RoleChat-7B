@@ -178,7 +178,7 @@ def generate_dataset(total=2000):
 
             # 每50条保存一次
             if len(results) % 50 == 0:
-                tmp_path = "./data/processed/synthetic_train_tmp.json"
+                tmp_path = "processed/synthetic_train_tmp.json"
                 with open(tmp_path, 'w', encoding='utf-8') as f:
                     json.dump(results, f, ensure_ascii=False, indent=2)
                 print(f"  💾 已临时保存{len(results)}条，请检查数据质量")
@@ -198,7 +198,7 @@ def generate_dataset(total=2000):
             continue
 
     # 最终保存
-    output_path = "./data/processed/synthetic_train.json"
+    output_path = "processed/synthetic_train.json"
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 

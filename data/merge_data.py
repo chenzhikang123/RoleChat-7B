@@ -119,12 +119,12 @@ def merge_all():
 
     # 加载BELLE数据
     print("加载BELLE开源数据...")
-    belle_data = load_json('./data/processed/sft_train.json')
+    belle_data = load_json('processed/sft_train.json')
     print(f"BELLE数据：{len(belle_data)}条")
 
     # 加载合成数据
     print("加载合成数据...")
-    synthetic_data = load_json('./data/processed/synthetic_train.json')
+    synthetic_data = load_json('processed/synthetic_train.json')
 
     # 过滤并修复合成数据
     print("过滤并修复合成数据...")
@@ -137,7 +137,7 @@ def merge_all():
     random.shuffle(all_data)
 
     # 保存
-    output_path = './data/processed/final_train.json'
+    output_path = 'processed/final_train.json'
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(all_data, f, ensure_ascii=False, indent=2)
 

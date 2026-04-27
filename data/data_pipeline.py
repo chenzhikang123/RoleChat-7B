@@ -68,7 +68,7 @@ def download_and_process():
     print(f"最终数据量：{len(sft_data)}条")
 
     # 保存训练数据
-    output_path = "./data/processed/sft_train.json"
+    output_path = "processed/sft_train.json"
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(sft_data, f, ensure_ascii=False, indent=2)
 
