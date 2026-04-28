@@ -14,7 +14,7 @@ import random
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="sk-equxghmnqurgcwlbvxvstdvrzhyubywoqgnraytxcwzmwcee",
+    api_key="填入大模型key",
     base_url="https://api.siliconflow.cn/v1"
 )
 
