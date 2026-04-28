@@ -1,0 +1,16 @@
+torch>=2.4.0
+transformers>=4.56.0
+peft>=0.18.0
+trl>=0.24.0
+accelerate>=1.11.0
+datasets>=3.0.0
+modelscope
+fastapi
+uvicorn
+pydantic
+openai==1.14.0
+chromadb
+sentencepiece
+pandas
+numpy
+tqdm
