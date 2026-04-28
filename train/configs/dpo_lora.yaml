@@ -1,0 +1,42 @@
+### 模型路径（用合并后的完整模型）
+model_name_or_path: D:\llm\RoleChat-7B\output\merged_model
+
+### 训练方式
+stage: dpo
+do_train: true
+finetuning_type: lora
+
+### LoRA参数
+lora_target: q_proj,v_proj,k_proj,o_proj
+lora_rank: 8
+lora_alpha: 16
+lora_dropout: 0.05
+
+### DPO专用参数
+pref_beta: 0.1
+pref_loss: sigmoid
+
+### 数据配置
+dataset: rolechat_dpo
+dataset_dir: D:\llm\LLaMA-Factory\data
+template: qwen
+cutoff_len: 2048
+
+### 训练参数
+output_dir: D:\llm\RoleChat-7B\output\dpo
+num_train_epochs: 2
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 5.0e-5
+lr_scheduler_type: cosine
+warmup_ratio: 0.05
+
+### 精度配置
+bf16: true
+gradient_checkpointing: true
+
+### 日志保存
+logging_steps: 20
+save_steps: 200
+save_total_limit: 2
+plot_loss: true
