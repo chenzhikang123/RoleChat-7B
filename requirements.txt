@@ -1,3 +1,4 @@
+#所需依赖
 torch>=2.4.0
 transformers>=4.56.0
 peft>=0.18.0
