@@ -7,3 +7,5 @@ data/raw/
 .idea/
 data/processed/
 test.py
+rag/chroma_db/
+deploy/rag/
